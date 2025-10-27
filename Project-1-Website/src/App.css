@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+
+*{
+     font-family: "Manrope", sans-serif;
+}
+
+:root{
+   --primary-color: #FFFFFF;
+    --secondary-color: #0A0A0A;
+    --text-color: #A7AABB;
+    --bg-color: #060606;
+    --accent-color: #A93E17;
+    --accent-secondary-color: #15399A;
+    --divider-color: #FFFFFF0F;
+    --dark-divider-color: #FFFFFF33;
+    --error-color: rgb(230, 87, 87);
+    --default-font: "Manrope", sans-serif;
+}
+
+
+.nav-menu-wrapper{
+    background: var(--divider-color);
+    border: 1px solid var(--divider-color);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 30px;
+    padding: 0 40px;
+}
+
+.btn-default{
+    position: relative;
+    display: inline-block;
+    background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-secondary-color) 50%, var(--accent-color) 100%);
+    background-size: 200% auto;
+    border-radius: 100px;
+    color: var(--primary-color);
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 1em;
+    text-transform: capitalize;
+    border: none;
+    outline: none;
+    padding: 17px 30px;
+    transition: all 0.4s 
+    ease-in-out;
+    overflow: hidden;
+    z-index: 0;
+}
+
+.btn-default:hover {
+    background-position: right center;
+}
