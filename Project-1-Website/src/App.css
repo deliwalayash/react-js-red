@@ -3,6 +3,15 @@
 *{
      font-family: "Manrope", sans-serif;
 }
+body {
+    position: relative;
+    font-family: var(--default-font);
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 1.1em;
+    color: var(--text-color);
+    background: var(--bg-color);
+}
 
 :root{
    --primary-color: #FFFFFF;
@@ -49,4 +58,156 @@
 
 .btn-default:hover {
     background-position: right center;
+}
+
+.hero {
+    position: relative;
+    background: url(./assets/images/hero-bg-shape.png) no-repeat;
+    background-position: top center;
+    background-size: auto;
+    padding: 340px 0 80px;
+    z-index: 1;
+}
+.hero::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: 160px;
+    top: 20%;
+    background: url(./assets/images/section-bg-shape-2\ \(1\).png) no-repeat;
+    background-position: left center;
+    background-size: cover;
+    width: 113px;
+    height: 110px;
+    animation: shape1 20s infinite 
+linear;
+    animation-direction: alternate;
+    z-index: 0;
+}
+
+.hero::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: 220px;
+    top: 20%;
+    background: url(./assets/images/section-bg-shape-2\ \(1\).png) no-repeat;
+    background-position: right center;
+    background-size: cover;
+    width: 82px;
+    height: 110px;
+    animation: shape1 20s infinite 
+linear;
+    animation-direction: alternate;
+    z-index: 0;
+}
+
+@keyframes shape1{
+    0% {
+    transform: translateY(0) rotate(0deg);
+}
+100% {
+    transform: translateY(50px) rotate(360deg);
+}
+}
+
+.hero-content {
+    position: relative;
+    width: 100%;
+    max-width: 840px;
+    margin: 0 auto;
+    text-align: center;
+    z-index: 2;
+}
+
+.hero-content::before {
+    content: '';
+    display: block;
+    position: absolute;
+    left: -28%;
+    bottom: 20%;
+    background: url(./assets/images/section-bg-shape-3.png) no-repeat;
+    background-position: left center;
+    background-size: cover;
+    width: 81px;
+    height: 85px;
+    animation: shape2 20s infinite 
+linear;
+    animation-direction: alternate;
+    z-index: 0;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+
+@keyframes shape2 {
+    0% {
+    transform: translateY(0) rotate(0deg);
+}
+100% {
+    transform: translateY(50px) rotate(-360deg);
+}
+}
+.hero-content .section-title {
+    position: relative;
+    z-index: 2;
+}
+.section-title {
+    margin-bottom: 40px;
+}
+
+.section-title h1 {
+    font-size: 70px;
+    line-height: 1.1em;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+    cursor: none;
+    color:var(--primary-color)
+}
+
+.section-title h1 span, .section-title h2 span {
+    font-weight: 700;
+    background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-secondary-color) 50%, var(--accent-color) 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s 
+ease-in-out;
+}
+
+.section-title p {
+    margin-top: 20px;
+    margin-bottom: 0;
+}
+.btn-highlighted {
+    background: linear-gradient(var(--bg-color), var(--bg-color)) padding-box, linear-gradient(to left, var(--accent-color), var(--accent-secondary-color)) border-box;
+    border: 1px solid transparent;
+    border: 1px solid var(--accent-color);
+    background: var(--bg-color);
+    padding: 16px 30px;
+    color: var(--primary-color);
+    border-radius: 100px;
+}
+
+.hero-company-slider {
+    text-align: center;
+    margin-top: 80px;
+}
+
+.hero-content::after {
+    content: '';
+    display: block;
+    position: absolute;
+    right: -28%;
+    bottom: 20%;
+    background: url(./assets/images/section-bg-shape-4.png) no-repeat;
+    background-position: right center;
+    background-size: cover;
+    width: 122px;
+    height: 126px;
+    animation: shape2 20s infinite 
+linear;
+    animation-direction: alternate;
+    z-index: 0;
 }

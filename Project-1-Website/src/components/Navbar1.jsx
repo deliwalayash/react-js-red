@@ -5,7 +5,7 @@ import Button1 from './Button1'
 const Navbar1 = () => {
   return (
   <>
-  <nav className='bg-black py-3'>
+  <nav className='py-3 '>
     <div className='container d-flex justify-content-between'>
     <div>
       <img src={logo} alt="" />
