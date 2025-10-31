@@ -1,6 +1,13 @@
 import React from 'react'
 import Button1 from './Button1'
 import Button2 from './Button2'
+import logo from '../assets/images/company-logo-3.svg';
+import logo1 from '../assets/images/company-logo-2.svg';
+import logo2 from '../assets/images/company-logo-3.svg';
+import logo3 from '../assets/images/company-logo-4.svg';
+
+
+
 
 const Hero = () => {
   return (
@@ -25,6 +32,14 @@ const Hero = () => {
             </div>
             <div className="hero-company-slider">
               <p>Already Chosen by leaders</p>
+            </div>
+            <div>
+              <marquee behavior="" direction="" >
+                <img src={logo} alt="company logo"  className="me-5"/>
+                <img src={logo1} alt="company logo"  className="me-5"/>
+                <img src={logo2} alt="company logo" className="me-5" />
+                <img src={logo3} alt="company logo" />
+              </marquee>
             </div>
           </div>
         </div>
