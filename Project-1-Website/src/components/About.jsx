@@ -16,7 +16,7 @@ const About = () => {
           simple, AI powered solutions.
         </h2>
       </div>
-      <div className="container">
+      <div className="container mb-5">
         <div className="row ">
           <div className="col-3">
             <AboutUsBox heading={"Seamless Integreation"} count={298} imgsrc={logo1} imgsrc2={logo2} ></AboutUsBox>

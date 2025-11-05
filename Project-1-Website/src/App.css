@@ -324,4 +324,80 @@ ease-in-out;
     align-content: end;
     text-align: left;
 }
+.service-item {
+    /* Existing Styles */
+    flex-wrap: nowrap; /* Prevent wrapping in desktop view */
+    justify-content: space-between;
+    border: 1px solid var(--divider-color);
+    /* Note: Background image path may need adjustment if not relative to the final compiled CSS */
+    background: url(./assets/images/service-item-bg.svg), var(--secondary-color); 
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 20px;
+    margin-bottom: 30px; /* Kept outside as it's a fixed vertical margin */
+    padding: 30px;
+    transition: all 0.4s ease-in-out;
+}
+
+.service-item:hover {
+    transform: translateY(-5px);
+}
+
+/* Fix 1: Ensure the content block takes up ALL available space */
+.service-item-content {
+    /* Ensure the content itself acts as a flex container */
+    display: flex; 
+    flex-direction: column;
+    /* This makes the content area expand as much as needed */
+    flex-grow: 1; 
+    margin-bottom: 30px; /* Space between text/title and image */
+}
+
+/* Ensure the description text is flexible too, pushing the image down */
+.service-item-content .description-text {
+    flex-grow: 1; /* This is the main fix! It expands to consume vertical space. */
+    margin-bottom: 0;
+}
+
+.service-item-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+
+.service-item-content h3 a {
+    color: inherit;
+}
+
+.service-item-image {
+    width: 100%;
+    text-align: center;
+    /* Prevent the image container from shrinking */
+    flex-shrink: 0; 
+}
+
+/* Fix 2: Control the image size within its container */
+.service-item-image figure {
+    display: block;
+    margin: 0;
+    line-height: 0; /* Important to remove extra spacing below inline images */
+}
+
+/* .img-fluid is a Bootstrap class, but we still ensure good image handling */
+.service-item-image img {
+    height: auto; 
+    max-height: 300px; /* Optional: Set a max height if images are extremely tall */
+    object-fit: contain; /* Ensures the whole image is visible without cropping */
+}
+
+/* Media Queries */
+@media only screen and (max-width: 991px) {
+    .service-item {
+        /* On mobile, reset padding */
+        padding: 20px;
+    }
+    .service-item-content {
+        margin-bottom: 20px;
+    }
+}
 
