@@ -10,10 +10,12 @@ const Navbar1 = () => {
     <div>
       <img src={logo} alt="" />
     </div>
-    <div className='d-flex align-items-center nav-menu-wrapper'>
-      <ul className='list-unstyled d-flex gap-5 fw-bold m-0'>
+
+
+       <div className='  nav-menu-wrapper '>
+      <ul className='list-unstyled d-flex gap-5 fw-bold m-0 '>
         <li>
-          <a href="" className='text-decoration-none text-white'>Home</a>
+          <a href="" className='text-decoration-none text-white '>Home</a>
         </li>
         <li>
           <a href="" className='text-decoration-none text-white'>About Us</a>
@@ -31,10 +33,11 @@ const Navbar1 = () => {
           <a href="" className='text-decoration-none text-white'>Contact US</a>
         </li>
       </ul>
-    </div>
-    <div>
+       </div>
+       <div>
       <Button1 text={"Get Started"}></Button1>
-    </div>
+       </div>
+    
 
     </div>
   </nav>

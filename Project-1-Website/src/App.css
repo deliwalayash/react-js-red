@@ -225,6 +225,7 @@ linear;
     border-radius: 100px;
     padding: 10px 50px;
     margin-bottom: 20px;
+    
 }
 .section-title h3::before {
     content: '';
@@ -400,4 +401,391 @@ ease-in-out;
         margin-bottom: 20px;
     }
 }
+
+.how-it-work {
+    padding: 80px 0;
+}
+.font-effect{
+    font-weight: 700;
+    background: linear-gradient(to right, var(--accent-color) 0%, var(--accent-secondary-color) 50%, var(--accent-color) 100%);
+    background-size: 200% auto;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    transition: all 0.4s 
+ease-in-out;
+}
+.how-work-item {
+    background: var(--secondary-color);
+    border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    padding: 40px 35px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+}
+.how-work-header .icon-box {
+    position: relative;
+    background: var(--accent-color);
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.how-work-item .how-work-header .icon-box::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(120deg, var(--accent-color), var(--accent-secondary-color)) no-repeat;
+    border-radius: 50%;
+    height: 100%;
+    width: 100%;
+    transform: scale(0);
+    transition: all 0.4s 
+ease-in-out;
+}
+
+.how-work-header .icon-box img {
+    position: relative;
+    max-width: 30px;
+    z-index: 1;
+}
+
+.how-work-step-no {
+    text-align: center;
+    margin-top: 15px;
+}
+
+.how-work-item-content {
+    width: calc(100% - 150px);
+}
+.how-work-header {
+    margin-right: 40px;
+    padding-right: 40px;
+    border-right: 1px solid var(--divider-color);
+}
+how-work-item-content h3 {
+    font-size: 20px;
+    margin-bottom: 15px;
+}
+.how-work-video-content {
+    position: sticky;
+    top: 30px;
+    margin-left: 15px;
+}
+.how-work-video {
+    width: 100%;
+}
+.how-work-video video {
+    width: 100%;
+    height: 700px;
+    object-fit: cover;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.how-work-video-content .section-footer-text {
+    margin: 30px 30px 0px;
+}
+
+.section-footer-text {
+    margin-top: 30px;
+    text-align: center;
+}
+.section-footer-text p {
+    margin-bottom: 0px;
+}
+
+.section-footer-text p a {
+    font-weight: 600;
+    text-transform: capitalize;
+    text-underline-offset: 3px;
+    color: var(--accent-color);
+    text-decoration: underline;
+    transition: 0.3s ease-in-out;
+}
+
+.facts-item {
+    background: var(--secondary-color) url(./assets/images/facts-item-bg.svg) no-repeat;
+    background-position: center center;
+    background-size: cover;
+    border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    /* height: calc(100% - 30px); */
+    margin-bottom: 30px;
+    padding: 40px 35px;
+    
+}
+.facts-item-title {
+    margin-bottom: 60px;
+}
+.facts-item-counter {
+    margin-bottom: 60px;
+}
+.facts-item-counter h2 {
+    font-size: 48px;
+    color: var(--accent-color);
+    margin-bottom: 5px;
+}
+.facts-item-counter p {
+    margin: 0;
+}
+.facts-item-content {
+    background: var(--bg-color);
+    border: 1px solid var(--divider-color);
+    border-radius: 20px;
+    padding: 20px;
+}
+.facts-item-content p {
+    margin: 0;
+}
+.project-item {
+    position: relative;
+    height: calc(100% - 30px);
+    margin-bottom: 30px;
+}
+.project-image figure {
+    display: block;
+    border-radius: 20px;
+    overflow: hidden;
+}
+.project-image figure:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(180deg, rgba(6, 6, 6, 0) 49.26%, rgba(6, 6, 6, 0.6) 86.32%);
+    z-index: 1;
+}
+
+.image-anime:after {
+    content: "";
+    position: absolute;
+    width: 200%;
+    height: 0%;
+    left: 50%
+135.625px
+;
+    top: 50%;
+    background-color: rgba(255, 255, 255, .1);
+    transform: translate(-50%, -50%) rotate(-45deg);
+    z-index: 1;
+}
+.project-content {
+    position: absolute;
+    right: 30px;
+    bottom: 30px;
+    left: 30px;
+    z-index: 2;
+}
+.project-content h3 {
+    font-size: 20px;
+    text-transform: capitalize;
+    margin-bottom: 10px;
+}
+.project-content p {
+    padding-left: 25px;
+    background: url(./assets/images/icon-sparkle.svg) no-repeat;
+    background-position: left center;
+    background-size: 18px auto;
+    text-transform: capitalize;
+    margin: 0;
+}
+.project-btn {
+    position: absolute;
+    top: 50px;
+    right: 30px;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.4s 
+ease-in-out;
+    z-index: 1;
+}
+.project-btn a img {
+    width: 100%;
+    max-width: 20px;
+    transition: all 0.3s 
+ease-in-out;
+}
+.project-image img {
+    width: 100%;
+    aspect-ratio: 1 / 1.352;
+    object-fit: cover;
+    border-radius: 20px;
+    transition: all 0.4s 
+ease-in-out;
+}
+/* --- Global Footer Styles --- */
+footer {
+    background: #000; /* Black background */
+    color: #fff; /* Default text color */
+    padding-top: 50px;
+}
+
+.container {
+    /* Assuming this is your standard container width, adjust as needed */
+    max-width: 1200px; 
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+/* --- 1. CTA Section Styling --- */
+.cta-section {
+    padding: 60px 0;
+    text-align: center;
+}
+
+.cta-wrapper {
+    background: rgba(255, 255, 255, 0.05); /* Slightly transparent background for the block */
+    padding: 40px;
+    border-radius: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+}
+
+.cta-text h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.cta-text .highlight {
+    color: #ff6e40; /* Or the specific orange color from the image */
+}
+
+.btn-cta {
+    background: linear-gradient(to right, #ff6e40, #cc4e00); /* Gradient background */
+    color: #fff;
+    border: none;
+    padding: 12px 30px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* --- 2. Main Footer Content Styling --- */
+.main-footer {
+    padding: 50px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Separator line */
+}
+
+.footer-col h4 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 20px;
+    color: rgba(255, 255, 255, 0.7); /* Slightly muted color for headings */
+}
+
+/* Logo/Brand */
+.footer-logo {
+    display: flex;
+    align-items: center;
+    /* You may need to add complex CSS here for the glowing logo effect */
+}
+
+.brand-text {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #fff;
+    margin-left: 10px;
+}
+
+/* Contact/Location Lists/Text */
+.contact-list, .footer-col p {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-list li a, .footer-col p {
+    color: rgba(255, 255, 255, 0.5);
+    text-decoration: none;
+    line-height: 2;
+    font-size: 0.95rem;
+}
+
+/* Newsletter */
+.newsletter-form {
+    display: flex;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.newsletter-form input {
+    background: transparent;
+    border: none;
+    color: #fff;
+    padding: 10px 15px;
+    flex-grow: 1;
+    outline: none;
+}
+
+.subscribe-btn {
+    background: #ff6e40; /* Orange background for subscribe button */
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* --- 3. Copyright Bar --- */
+.copyright-bar {
+    padding: 20px 0;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.copyright-bar p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 0.85rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 992px) {
+    .cta-wrapper {
+        flex-direction: column;
+        text-align: center;
+    }
+    .cta-button {
+        width: 100%;
+    }
+    .btn-cta {
+        width: 100%;
+    }
+    .main-footer .col-md-6 {
+        margin-bottom: 30px;
+    }
+}
+.main-footer {
+    background: url(./assets/images/footer-bg.png) no-repeat;
+    
+    background-size: auto;
+    border-top: 1px solid var(--divider-color);
+    padding: 100px 0 0;
+}
+
+ .nav-menu-wrapper{
+    display: flex;
+    align-items: center;
+ }
+ @media (max-width:992px) {
+    .nav-menu-wrapper{
+        display: none;
+    }
+ }
 

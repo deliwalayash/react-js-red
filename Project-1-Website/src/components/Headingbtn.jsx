@@ -4,7 +4,8 @@ const Headingbtn = ({text}) => {
   return (
     <div>
    <div className="">
-      <h3>{text}</h3>                  
+      <h3>{text}</h3> 
+                    
    </div>
     </div>
   )
