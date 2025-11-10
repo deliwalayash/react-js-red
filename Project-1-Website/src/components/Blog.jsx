@@ -11,8 +11,9 @@ const Blog = () => {
                     <span className="font-effect display-5"> News And Trendz</span>
                 </h2>
             </div>
-      
     </div>
+
+    
   )
 }
 

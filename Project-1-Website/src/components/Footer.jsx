@@ -82,7 +82,7 @@ const Footer = () => {
             {/* --- 3. Copyright Bar --- */}
             <div className="copyright-bar">
                 <div className="container">
-                    <p>Copyright © 2025 All Rights Reserved.</p>
+                    <p>Copyright © {new Date().getFullYear()} All Rights Reserved.</p>
                 </div>
             </div>
       
