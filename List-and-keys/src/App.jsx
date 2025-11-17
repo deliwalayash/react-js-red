@@ -32,6 +32,25 @@ function App() {
     setUser(updatalist)
 
   }
+
+  const edituserdetails =[
+    {
+    id:15,
+    name:"vihaan",
+    website:"vihaan.com",
+    email:"vihaan@gmail.com",
+  }
+  ]
+  const editUser =(id)=>{
+    const newuser=edituserdetails[0]
+
+    const updatelist = user.map((curEle)=>{
+     return  curEle.id == id ? {...curEle,...newuser} : curEle
+    })
+
+    setUser(updatelist)
+    
+  }
   return (
     <>
     {
@@ -48,20 +67,19 @@ function App() {
           </tr>
         </thead>
         <tbody>
-          {
-           user.length > 0 ?   user.map((curEle)=>{
+          { user.length > 0 ?(user.map((curEle)=>{
               return(
                 <tr className='text-center' key={curEle.id}>
                   <td>{curEle.id}</td>
                   <td>{curEle.name}</td>
                   <td>{curEle.website}</td>
                   <td>{curEle.email}</td>
-                  <td className='text-center'><button className='btn btn-danger' onClick={()=>{deleteUser(curEle.id)}}>Delete</button></td>
-                 
+                  <td className='text-center'><button className='btn btn-danger' onClick={()=>{deleteUser(curEle.id)}}>Delete</button>
+                  <button className='btn btn-warning ms-3' onClick={()=>{editUser(curEle.id)}}>Edit</button>
+                  </td>      
                 </tr>
               )
-            }) : <td colSpan={5} className='text-center fw-bold fs-1'>No User Found</td>
-          }
+            })):(<tr><td colSpan={5} className='text-center fw-bold fs-1'>No User Found</td></tr>)}
         </tbody>
 
       </table>
