@@ -10,16 +10,50 @@ function App() {
     facilities:[]
   })
 
+  const [users,setUsers]=useState([])
+
   const handleChange = (e)=>{
-    const {name,value}=e.target
-    setUser((prev)=>({
-      ...prev,[name]:value
-    }))
+    const {name,value,checked,type}=e.target
+
+    if(type == "checkbox"){
+      setUser((prev)=>{
+        let updataedfacilities=[]
+        if(checked){
+          updataedfacilities=[...prev.facilities,value]
+        }
+        else{
+          updataedfacilities=prev.facilities.filter(item =>item !== value)
+        }
+        return {
+          ...prev,
+          facilities:updataedfacilities
+        }
+      })
+    }
+    else{
+
+      setUser((prev)=>{
+        return {
+          ...prev,[name]:value
+        }
+      })
+    }
   }
 
   const handleSubmit = (e)=>{
     e.preventDefault()
     console.log(user)
+   
+    setUsers((prev)=>{
+    return  [...prev,user]
+    })
+
+     setUser({
+      name:"",
+      course:"",
+      gender:"",
+      facilities:[]
+    })
   }
 
   return (
@@ -57,7 +91,20 @@ function App() {
     <button type='submit'>Submit</button>
     </form>
 
-     
+   {
+    users.map((curEle)=>{
+      return (
+
+        <div>
+          <h1>Name:{curEle.name}</h1>
+          <h1>Course:{curEle.course}</h1>
+          <h1>Gender:{curEle.gender}</h1>
+          <h1>Facilities:{curEle.facilities}</h1>
+        </div>
+      )
+    })
+   }
+
     </>
   )
 }
