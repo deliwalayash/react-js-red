@@ -1,0 +1,24 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "title": "yash",
+      "views": 200
+    },
+    {
+      "id": "2",
+      "title": "foram",
+      "views": "800"
+    },
+    {
+      "id": "0919",
+      "title": "vihaan",
+      "views": "9000"
+    },
+    {
+      "id": "9b83",
+      "title": "malav",
+      "views": "444"
+    }
+  ]
+}
