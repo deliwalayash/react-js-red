@@ -19,6 +19,29 @@
       "id": "9b83",
       "title": "malav",
       "views": "444"
+    },
+    {
+      "id": "c2c8",
+      "title": "heloo",
+      "views": "5000"
+    },
+    {
+      "id": "5d13",
+      "title": "yash deliwala",
+      "views": "1234"
+    },
+    {
+      "id": "dfba",
+      "title": "malav deliwala",
+      "views": "5000"
+    }
+  ],
+  "users": [
+    {
+      "id": "ca7d",
+      "name": "yash",
+      "email": "yash@gmail.com",
+      "password": "1234"
     }
   ]
 }
